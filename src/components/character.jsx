@@ -11,7 +11,7 @@ const Character = () => {
       <Container character>
         <Container borderPadding>
           <Title1>Esneider</Title1>
-          <Title4>Id of character</Title4>
+          <Title4>Character Id: 323</Title4>
         </Container>
 
         <Container padding>
