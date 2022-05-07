@@ -6,7 +6,7 @@ import { Text } from "../shared/Text";
 const Character = () => {
   return (
     <Container horizontal>
-      <Picture src="https://picsum.photos/id/1/300/300" />
+      <Picture character src="https://picsum.photos/id/1/300/300" />
 
       <Container character>
         <Container borderPadding>
@@ -15,6 +15,21 @@ const Character = () => {
         </Container>
 
         <Container padding>
+          <Container flexHorizontal>
+            <Text attribute>asass{':'}</Text>
+            <Text value>asass</Text>
+          </Container>
+
+          <Container flexHorizontal>
+            <Text attribute>asass{':'}</Text>
+            <Text value>asass</Text>
+          </Container>
+
+          <Container flexHorizontal>
+            <Text attribute>asass{':'}</Text>
+            <Text value>asass</Text>
+          </Container>
+
           <Container flexHorizontal>
             <Text attribute>asass{':'}</Text>
             <Text value>asass</Text>

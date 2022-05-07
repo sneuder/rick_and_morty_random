@@ -4,9 +4,9 @@ export const Container = styled.div`
   width: 100%;
 
   ${props => props.horizontal && `
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    display: flex;
+    align-items: flex-start;
+
   `}
 
   ${props => props.flexHorizontal && `
@@ -16,7 +16,8 @@ export const Container = styled.div`
   `}
 
   ${({character}) => character && `
-    height: auto;
+    margin-left: 20px;
+    min-height: auto;
     border-radius: 0.3rem;
     box-shadow: rgb(136 152 170 / 15%) 0px 0px 2rem 0px;
   `}

@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 export const Picture = styled.img`
-  width: 100%;
+
+  ${props => props.character && `
+    width: 80%;
+    min-height: 300px;
+  `}
 
   ${props => props.history && `
     width: 80px;
