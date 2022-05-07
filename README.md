@@ -1,1 +1,1 @@
-# rick_and_morty_random
+# Rick and Morty Random
