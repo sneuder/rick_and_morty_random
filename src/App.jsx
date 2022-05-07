@@ -1,11 +1,18 @@
+import Character from "./components/character";
 
+import { Main } from "./global";
+import { Container } from "./shared/Container";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
-  )
+    <Main>
+      <Container>
+        <Character />
+      </Container>
+      <Container></Container>
+      <Container></Container>
+    </Main>
+  );
 }
 
-export default App
+export default App;
