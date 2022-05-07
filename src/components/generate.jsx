@@ -3,7 +3,7 @@ import { Button } from "../shared/Button";
 
 const Generate = () => {
   return (
-    <Container>
+    <Container generate>
       <Button generate>Generate</Button>
     </Container>
   )

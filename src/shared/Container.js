@@ -41,4 +41,10 @@ export const Container = styled.div`
   ${props => props.padding && `
     padding: 12px 20px;
   `}
+
+  ${props => props.generate && `
+    padding: 12px 0;
+    display: flex;
+    justify-content: flex-end;
+  `}
 `
