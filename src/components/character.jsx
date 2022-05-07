@@ -9,12 +9,12 @@ const Character = () => {
       <Picture src="https://picsum.photos/id/1/300/300" />
 
       <Container character>
-        <Container>
+        <Container borderB>
           <Title1>Esneider</Title1>
           <Title4>Id of character</Title4>
         </Container>
 
-        <Container>
+        <Container paddingG>
           <Container values>
             <Text attribute>asass{':'}</Text>
             <Text value>asass</Text>
