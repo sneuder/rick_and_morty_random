@@ -363,4 +363,4 @@ this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`):a
   @media (max-width: 820px) {
     padding: 30px 2rem;
   }
-`;function rk(){const[e,t]=X.exports.useState({character:{},history:[]});return se(Ua.Provider,{value:{information:e,setInformation:t},children:ht(nk,{children:[se(qE,{}),se(XE,{}),se(ek,{})]})})}Hs.createRoot(document.getElementById("root")).render(se(Rr.StrictMode,{children:ht(dS,{client:DS,children:[se(tk,{}),se(rk,{})]})}))});export default ik();
+`;function rk(){if(typeof document!="undefined"){const[e,t]=X.exports.useState({character:{},history:[]});return se(Ua.Provider,{value:{information:e,setInformation:t},children:ht(nk,{children:[se(qE,{}),se(XE,{}),se(ek,{})]})})}}typeof document!="undefined"&&Hs.createRoot(document.getElementById("root")).render(se(Rr.StrictMode,{children:ht(dS,{client:DS,children:[se(tk,{}),se(rk,{})]})}))});export default ik();
