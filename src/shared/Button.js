@@ -24,6 +24,7 @@ export const Button = styled.button`
     border: 1px solid rgb(130, 101, 252);
     background-color: transparent;
     color: rgb(130, 101, 252);
+    margin-left: 1rem;
 
     transition: all 0.3s ease-in-out;
 

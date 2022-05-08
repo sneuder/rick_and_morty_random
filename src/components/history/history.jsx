@@ -1,10 +1,12 @@
 import { useContext } from "react";
-import Context from "../context/context";
+import Context from "../../context/context";
 
-import { Button } from "../shared/Button";
-import { Container } from "../shared/Container";
-import { Picture } from "../shared/Picture";
-import { Title2, Title3 } from "../shared/Title";
+import { ContainerHistoryItem, ContainerTitle } from "./Container";
+
+import { Button } from "../../shared/Button";
+import { Container } from "../../shared/Container";
+import { Picture } from "../../shared/Picture";
+import { Title2, Title3 } from "../../shared/Title";
 
 const History = () => {
   const { information, setInformation } = useContext(Context);
@@ -14,15 +16,15 @@ const History = () => {
 
   return (
     <Container>
-      <Container center>
+      <ContainerTitle>
         <Title2>History</Title2>
-      </Container>
+      </ContainerTitle>
 
       {history.map((character) => (
-        <Container flexHistory key={character.id}>
+        <ContainerHistoryItem key={character.id}>
           <Picture history src={character.image} />
 
-          <Container flexHorizontal>
+          <ContainerHistoryItem>
             <Title3>{character.name}</Title3>
             <Button
               view
@@ -32,8 +34,8 @@ const History = () => {
             >
               View
             </Button>
-          </Container>
-        </Container>
+          </ContainerHistoryItem>
+        </ContainerHistoryItem>
       ))}
     </Container>
   );
