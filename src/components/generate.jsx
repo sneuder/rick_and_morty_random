@@ -20,7 +20,7 @@ const Generate = () => {
           getCharacter({ variables: { id: randomNumber() } }).then((r) =>
             setInformation({
               character: r.data.character,
-              history: [...information.history, r.data.character],
+              history: [r.data.character, ...information.history],
             })
           )
         }
