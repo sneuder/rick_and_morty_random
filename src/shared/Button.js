@@ -14,6 +14,10 @@ export const Button = styled.button`
     border: none;
     padding: 0.875rem 1rem;
     color: #ffffff;
+
+    @media (max-width: 550px) {
+      width: 100%;
+    }
   `}
 
   ${props => props.view && `

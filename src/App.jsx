@@ -2,7 +2,7 @@ import { useState } from "react";
 import Context from "./context/context";
 
 import Character from "./components/character/index";
-import Generate from "./components/generate";
+import Generate from "./components/generate/index";
 import History from "./components/history";
 
 import { Main } from "./global";

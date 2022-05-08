@@ -1,9 +1,9 @@
-import { Container } from "../shared/Container";
-import { Title1 } from "../shared/Title";
+import { Container } from "./Containers";
+import { Title1 } from "../../shared/Title";
 
 const Message = () => {
   return (
-    <Container center>
+    <Container>
       <Title1 message>No se ha cargado ningún personaje</Title1>
     </Container>
   );

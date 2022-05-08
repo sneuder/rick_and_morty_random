@@ -9,7 +9,7 @@ import { Picture } from "../../shared/Picture";
 import { Title1, Title4 } from "../../shared/Title";
 import { Text } from "../../shared/Text";
 
-import Message from "../message";
+import Message from "../message/index";
 
 const Character = () => {
   const { information, setInformation } = useContext(Context);

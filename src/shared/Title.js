@@ -10,6 +10,11 @@ export const Title1 = styled.h1`
     font-size: 30px;
     font-weight: 400;
     padding: 80px;
+
+    @media (max-width: 550px) {
+      text-align: center;
+      padding: 40px;
+    }
   `}
 `;
 
