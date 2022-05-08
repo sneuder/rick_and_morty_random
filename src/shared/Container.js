@@ -31,6 +31,7 @@ export const Container = styled.div`
   ${({flexHistory}) => flexHistory && `
     height: auto;
     border-radius: 0.3rem;
+    margin-bottom: 20px;
     box-shadow: rgb(136 152 170 / 15%) 0px 0px 2rem 0px;
     display: flex;
   `}
