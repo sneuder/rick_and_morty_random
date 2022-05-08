@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 export const CHARACTER = gql`
   query {
-    character(id: "48") {
+    character(id: "301") {
       name
       id
       status
