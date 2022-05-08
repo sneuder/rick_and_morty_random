@@ -13,7 +13,10 @@ export const Title1 = styled.h1`
   `}
 `;
 
-export const Title2 = styled.h2``;
+export const Title2 = styled.h2`
+  margin: 30px 0px;
+  font-size: 25px;
+`;
 
 export const Title3 = styled.h3``;
 

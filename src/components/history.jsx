@@ -14,7 +14,9 @@ const History = () => {
 
   return (
     <Container>
-      <Title2>History</Title2>
+      <Container center>
+        <Title2>History</Title2>
+      </Container>
 
       {history.map((character) => (
         <Container flexHistory key={character.id}>

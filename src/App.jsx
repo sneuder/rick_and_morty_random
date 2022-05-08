@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Context from "./context/context";
 
-import Character from "./components/character";
+import Character from "./components/character/index";
 import Generate from "./components/generate";
 import History from "./components/history";
 
