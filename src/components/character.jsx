@@ -1,5 +1,5 @@
-import { useQuery } from "@apollo/client";
-import { CHARACTER } from "../graphql/queries";
+import { useContext } from 'react';
+import Context from "../context/context";
 import orderInfo from "../utils/orderInfo";
 
 import { Container } from "../shared/Container";
@@ -8,12 +8,12 @@ import { Title1, Title4 } from "../shared/Title";
 import { Text } from "../shared/Text";
 
 const Character = () => {
-  const { loading, error, data } = useQuery(CHARACTER);
+  const {information, setInformation} = useContext(Context);
+  const { character } = information;
 
-  if (loading) return <p>Loading...</p>;
+  if(!character.id) return <p>Loading...</p>;
 
-  const { character } = data;
-  const { name, id, image } = character;
+  const {name, id, image} = character;
   const details = orderInfo(character);
 
   return (
@@ -29,7 +29,7 @@ const Character = () => {
         <Container padding>
           {
             details.map((detail) => (
-              <Container flexHorizontal>
+              <Container flexHorizontal key={detail.key}>
                 <Text attribute>{detail.key}{':'}</Text>
                 <Text value>{detail.value || "unknown"}</Text>
               </Container>

@@ -1,12 +1,34 @@
+import { useContext } from "react";
+import Context from "../context/context";
+
+import { useLazyQuery } from "@apollo/client";
+import { CHARACTER } from "../graphql/queries";
+import randomNumber from "../utils/randomNumber";
+
 import { Container } from "../shared/Container";
 import { Button } from "../shared/Button";
 
 const Generate = () => {
+  const [getCharacter, { loading, error, data }] = useLazyQuery(CHARACTER);
+  const { information, setInformation } = useContext(Context);
+
   return (
     <Container generate>
-      <Button generate>Generate</Button>
+      <Button
+        generate
+        onClick={() =>
+          getCharacter({ variables: { id: randomNumber() } }).then((r) =>
+            setInformation({
+              character: r.data.character,
+              history: [...information.history, r.data.character],
+            })
+          )
+        }
+      >
+        Generate
+      </Button>
     </Container>
-  )
-}
+  );
+};
 
 export default Generate;
