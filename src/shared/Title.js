@@ -24,7 +24,6 @@ export const Title2 = styled.h2`
 `;
 
 export const Title3 = styled.h3`
-
   @media (max-width: 470px) {
     margin-bottom: 10px;
   }

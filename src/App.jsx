@@ -5,7 +5,7 @@ import Character from "./components/character/index";
 import Generate from "./components/generate/index";
 import History from "./components/history/index";
 
-import { Main } from "./global";
+import { Main } from "./styles";
 
 function App() {
   const [information, setInformation] = useState({
