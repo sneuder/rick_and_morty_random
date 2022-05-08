@@ -8,11 +8,15 @@ import App from "./App";
 
 import { GlobalStyle } from "./styles";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ApolloProvider client={client}>
-      <GlobalStyle />
-      <App />
-    </ApolloProvider>
-  </React.StrictMode>
-);
+if(typeof document !== "undefined") {
+
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <ApolloProvider client={client}>
+        <GlobalStyle />
+        <App />
+      </ApolloProvider>
+    </React.StrictMode>
+  
+  );
+}

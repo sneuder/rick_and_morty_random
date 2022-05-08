@@ -8,20 +8,22 @@ import History from "./components/history/index";
 import { Main } from "./styles";
 
 function App() {
-  const [information, setInformation] = useState({
-    character: {},
-    history: [],
-  });
+  if (typeof document !== "undefined") {
+    const [information, setInformation] = useState({
+      character: {},
+      history: [],
+    });
 
-  return (
-    <Context.Provider value={{information, setInformation}}>
-      <Main>
-        <Character />
-        <Generate />
-        <History />
-      </Main>
-    </Context.Provider>
-  );
+    return (
+      <Context.Provider value={{ information, setInformation }}>
+        <Main>
+          <Character />
+          <Generate />
+          <History />
+        </Main>
+      </Context.Provider>
+    );
+  }
 }
 
 export default App;
