@@ -22,7 +22,14 @@ const History = () => {
 
           <Container flexHorizontal>
             <Title3>{character.name}</Title3>
-            <Button view>View</Button>
+            <Button
+              view
+              onClick={() =>
+                setInformation({ ...information, character: character })
+              }
+            >
+              View
+            </Button>
           </Container>
         </Container>
       ))}
