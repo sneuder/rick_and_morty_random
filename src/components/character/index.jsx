@@ -21,7 +21,7 @@ const Character = () => {
   const details = orderInfo(character);
 
   return (
-    <Container>
+    <Container >
       <Picture character src={image} />
 
       <ContainerCharacter>
@@ -32,16 +32,16 @@ const Character = () => {
 
         <ContainerDetails>
           {details.map((detail, index) => (
-            <>
-              <ContainerDetail key={detail.key}>
-                <Text attribute>
+            <div key={detail.key}>
+              <ContainerDetail>
+                <Text attribute className="556">
                   {detail.key}
                   {":"}
                 </Text>
                 <Text value>{detail.value || "unknown"}</Text>
               </ContainerDetail>
-              {details.length - 1 !== index && <Line />}
-            </>
+              {details.length - 1 !== index && <Line key={index}/>}
+            </ div>
           ))}
         </ContainerDetails>
       </ContainerCharacter>
