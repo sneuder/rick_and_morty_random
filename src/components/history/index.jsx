@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import Context from "../../context/context";
 
-import { ContainerHistoryItem, ContainerTitle } from "./Container";
+import { Container, ContainerHistoryItem, ContainerTitle } from "./Container";
 
 import { Button } from "../../shared/Button";
-import { Container } from "../../shared/Container";
 import { Picture } from "../../shared/Picture";
 import { Title2, Title3 } from "../../shared/Title";
 
@@ -24,7 +23,7 @@ const History = () => {
         <ContainerHistoryItem key={character.id}>
           <Picture history src={character.image} />
 
-          <ContainerHistoryItem>
+          <ContainerHistoryItem nameButton>
             <Title3>{character.name}</Title3>
             <Button
               view

@@ -23,7 +23,12 @@ export const Title2 = styled.h2`
   font-size: 25px;
 `;
 
-export const Title3 = styled.h3``;
+export const Title3 = styled.h3`
+
+  @media (max-width: 470px) {
+    margin-bottom: 10px;
+  }
+`;
 
 export const Title4 = styled.h4`
   font-size: 0.625rem;

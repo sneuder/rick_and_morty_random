@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 1rem;
 
   @media (max-width: 820px) {
     flex-direction: column;

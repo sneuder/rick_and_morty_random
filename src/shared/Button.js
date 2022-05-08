@@ -32,5 +32,9 @@ export const Button = styled.button`
       background-color: rgb(130, 101, 252);
       color: #ffffff;
     }
+
+    @media (max-width: 470px) {
+      margin-left: 0;
+    }
   `}
 `;

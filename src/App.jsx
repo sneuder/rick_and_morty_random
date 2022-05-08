@@ -3,7 +3,7 @@ import Context from "./context/context";
 
 import Character from "./components/character/index";
 import Generate from "./components/generate/index";
-import History from "./components/history";
+import History from "./components/history/index";
 
 import { Main } from "./global";
 
