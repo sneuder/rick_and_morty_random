@@ -7,6 +7,8 @@ import { Button } from "../../shared/Button";
 import { Picture } from "../../shared/Picture";
 import { Title2, Title3 } from "../../shared/Title";
 
+import scrollbar from "../../utils/scrollbar";
+
 const History = () => {
   const { information, setInformation } = useContext(Context);
   const { history } = information;
@@ -27,9 +29,10 @@ const History = () => {
             <Title3>{character.name}</Title3>
             <Button
               view
-              onClick={() =>
-                setInformation({ ...information, character: character })
-              }
+              onClick={() => {
+                setInformation({ ...information, character: character });
+                scrollbar();
+              }}
             >
               View
             </Button>
