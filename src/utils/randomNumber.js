@@ -1,4 +1,4 @@
-const randomNumber = (max = 600) => {
+const randomNumber = (max = 820) => {
   const number = Math.floor(Math.random() * max) + 1;
   return number;
 }
