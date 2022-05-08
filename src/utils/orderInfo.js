@@ -1,3 +1,4 @@
+import dates from "./dates";
 
 const orderInfo = (character) => {
   const { species, type, status, origin, location, gender, created } = character;
@@ -5,6 +6,8 @@ const orderInfo = (character) => {
   let keys = ["status", "species", "type", "gender", "origin", "location", "created at"];
 
   details = details.map((detail, index )=> {
+    if(keys[index] === "created at") detail = dates(detail);
+
     return {
       key: keys[index],
       value: detail
