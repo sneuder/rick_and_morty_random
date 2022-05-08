@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -14,8 +14,20 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Play, sans-serif;
     letter-spacing: 1px;
   }
+
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, rgb(48, 206, 231), rgb(130, 101, 252));
+    border-radius: 0.3rem;
+  }
 `;
- 
 
 export const Main = styled.main`
   max-width: 100vw;
@@ -24,6 +36,5 @@ export const Main = styled.main`
 
   @media (max-width: 820px) {
     padding: 30px 2rem;
-
   }
 `;
