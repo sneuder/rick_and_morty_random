@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sneuder.github.io/rick_and_morty_random/",
   "type": "module",
   "name": "rick_and_morty_random",
   "private": true,
