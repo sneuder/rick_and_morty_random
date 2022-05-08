@@ -9,3 +9,8 @@ This is an app built with React consuming an api with Graphql. This playground i
 - Saves history of each character.
 - We can click to review the previous character.
 - Responsive.
+
+## Deployment
+
+It was deployed using GitHub Pages:
+https://sneuder.github.io/rick_and_morty_random/
