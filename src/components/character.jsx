@@ -7,11 +7,13 @@ import { Picture } from "../shared/Picture";
 import { Title1, Title4 } from "../shared/Title";
 import { Text } from "../shared/Text";
 
+import Message from "./message";
+
 const Character = () => {
   const {information, setInformation} = useContext(Context);
   const { character } = information;
 
-  if(!character.id) return <p>Loading...</p>;
+  if(!character.id) return <Message />;
 
   const {name, id, image} = character;
   const details = orderInfo(character);

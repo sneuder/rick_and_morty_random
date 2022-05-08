@@ -15,6 +15,12 @@ export const Container = styled.div`
     align-items: center;
   `}
 
+  ${({center}) => center && `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `}
+
   ${({character}) => character && `
     margin-left: 20px;
     min-height: auto;

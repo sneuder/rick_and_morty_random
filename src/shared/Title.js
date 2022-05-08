@@ -5,6 +5,12 @@ export const Title1 = styled.h1`
   font-weight: 600;
   margin: 10px 0px;
   color: rgb(31, 38, 45);
+
+  ${({message}) => message && `
+    font-size: 30px;
+    font-weight: 400;
+    padding: 80px;
+  `}
 `;
 
 export const Title2 = styled.h2``;
