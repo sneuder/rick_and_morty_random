@@ -1,11 +1,7 @@
-import { Container, Title } from './elements';
+import { Title } from './elements';
 
 const Message = () => {
-  return (
-    <Container>
-      <Title>No se ha cargado ningún personaje</Title>
-    </Container>
-  );
+  return <Title>No se ha cargado ningún personaje</Title>;
 };
 
 export default Message;
