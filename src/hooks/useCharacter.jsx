@@ -9,7 +9,9 @@ import { CHARACTER } from '../services/graphql/queries';
 
 const useCharacter = () => {
   const { updateHistory, setMainCharacter } = useContext(CharactersContext);
+
   const [getCharacter, result] = useLazyQuery(CHARACTER);
+  const loadingState = result.loading;
 
   const handleCharacter = () => {
     const id = randomNumber();
@@ -31,6 +33,7 @@ const useCharacter = () => {
   }, [result]);
 
   return {
+    loadingState,
     handleCharacter,
   };
 };
