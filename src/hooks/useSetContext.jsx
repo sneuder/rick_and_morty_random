@@ -19,11 +19,10 @@ const useSetContext = () => {
   };
 
   const updateHistory = () => {
-    if (!characters.main) return;
-    setCharacters({
-      ...characters,
-      history: [characters.main, ...characters.history],
-    });
+    setCharacters((prev) => ({
+      ...prev,
+      history: [prev.main, ...prev.history],
+    }));
   };
 
   return {

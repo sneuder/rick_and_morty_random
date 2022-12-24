@@ -25,8 +25,8 @@ const useCharacter = () => {
   useEffect(() => {
     if (result.data?.character) {
       const newCharacter = new Character(result.data.character);
-      updateHistory(newCharacter);
       setMainCharacter(newCharacter);
+      updateHistory();
     }
   }, [result]);
 
