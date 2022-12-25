@@ -6,8 +6,4 @@ export const Title = styled.h1`
   font-weight: 400;
   text-align: center;
   color: ${colors.primary};
-
-  @media (max-width: 550px) {
-    padding: 40px;
-  }
 `;
