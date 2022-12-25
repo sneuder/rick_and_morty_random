@@ -8,8 +8,9 @@ import Character from '../models/character';
 import scrollbar from '../utils/scrollbar';
 
 const useHistory = () => {
-  const { setMainCharacter } = useContext(CharactersContext);
+  const { setMainCharacter, characters } = useContext(CharactersContext);
   const [getCharacter, result] = useLazyQuery(CHARACTER);
+  const loadingState = result.loading;
 
   const handleHistory = (id) => {
     const variables = {
@@ -23,13 +24,15 @@ const useHistory = () => {
 
   useEffect(() => {
     if (result.data?.character) {
-      const foundCharacter = new Character(result.data.character);
+      const newCharacter = result.data.character;
+      const foundCharacter = new Character(newCharacter);
       setMainCharacter(foundCharacter);
       scrollbar();
     }
   }, [result]);
 
   return {
+    loadingState,
     handleHistory,
   };
 };
