@@ -26,6 +26,7 @@ export const Card = styled.div`
   align-items: center;
   gap: 1rem;
   box-shadow: rgb(136 152 170 / 15%) 0px 0px 2rem 0px;
+  padding-right: 1rem;
 `;
 
 export const Image = styled.img`
