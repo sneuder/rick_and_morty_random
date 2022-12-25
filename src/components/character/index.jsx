@@ -1,50 +1,43 @@
-import { useContext } from "react";
-import Context from "../../context/context";
-import orderInfo from "../../utils/orderInfo";
+import {
+  Image,
+  Container,
+  Card,
+  ContainerHeader,
+  Title,
+  SubTitle,
+  ContainerDetails,
+  ContainerDetail,
+  TitleDetail,
+  TextDetail,
+  Line,
+} from './elements';
 
-import { Line } from "./Line";
-import { Container, ContainerCharacter, ContainerDetail, ContainerDetails, ContainerName } from "./Containers";
-
-import { Picture } from "../../shared/Picture";
-import { Title1, Title4 } from "../../shared/Title";
-import { Text } from "../../shared/Text";
-
-import Message from "../message/index";
-
-const Character = () => {
-  const { information, setInformation } = useContext(Context);
-  const { character } = information;
-
-  if (!character.id) return <Message />;
-
-  const { name, id, image } = character;
-  const details = orderInfo(character);
+const Character = ({ main }) => {
+  const { id, name, image, details } = main;
 
   return (
-    <Container >
-      <Picture character src={image} />
-
-      <ContainerCharacter>
-        <ContainerName>
-          <Title1>{name}</Title1>
-          <Title4>Character Id: {id}</Title4>
-        </ContainerName>
-
+    <Container>
+      <Image
+        src={image}
+        alt={name}
+      />
+      <Card>
+        <ContainerHeader>
+          <Title>{name}</Title>
+          <SubTitle>character id: {id}</SubTitle>
+        </ContainerHeader>
         <ContainerDetails>
-          {details.map((detail, index) => (
-            <div key={detail.key}>
+          {details.map(({ title, text }, i) => (
+            <>
               <ContainerDetail>
-                <Text attribute className="556">
-                  {detail.key}
-                  {":"}
-                </Text>
-                <Text value>{detail.value || "unknown"}</Text>
+                <TitleDetail>{title}</TitleDetail>
+                <TextDetail>{text}</TextDetail>
               </ContainerDetail>
-              {details.length - 1 !== index && <Line key={index}/>}
-            </ div>
+              {i !== details.length - 1 && <Line />}
+            </>
           ))}
         </ContainerDetails>
-      </ContainerCharacter>
+      </Card>
     </Container>
   );
 };
