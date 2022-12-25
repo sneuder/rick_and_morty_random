@@ -21,7 +21,7 @@ const History = ({ history }) => {
               alt={name}
             />
             <NameCharacter>{name}</NameCharacter>
-            <ViewButton />
+            <ViewButton idCharacter={id} />
           </Card>
         ))}
       </ContainerCards>
