@@ -2,8 +2,8 @@ import dates from '../utils/dates';
 
 class Detail {
   constructor(info) {
-    this.key = info.key;
-    this.value = info.value;
+    this.title = info.title;
+    this.text = info.text;
   }
 }
 
@@ -11,6 +11,7 @@ class Character {
   constructor(info) {
     this.id = info.id;
     this.name = info.name;
+    this.image = info.image;
     this.details = this.callDetails(info);
   }
 
@@ -31,7 +32,7 @@ class Character {
       if (info[keyDetail].name) value = info[keyDetail].name;
       if (keyDetail === 'created') value = dates(info[keyDetail]);
 
-      return new Detail({ key: keyDetail, value: value });
+      return new Detail({ title: keyDetail, text: value || 'unknown' });
     });
   }
 }
