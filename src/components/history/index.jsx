@@ -1,3 +1,5 @@
+import ViewButton from '../../shared/components/viewButton';
+
 import {
   Container,
   Title,
@@ -19,6 +21,7 @@ const History = ({ history }) => {
               alt={name}
             />
             <NameCharacter>{name}</NameCharacter>
+            <ViewButton />
           </Card>
         ))}
       </ContainerCards>
