@@ -14,14 +14,14 @@ const History = ({ history }) => {
     <Container>
       <Title>history</Title>
       <ContainerCards>
-        {history.map(({ id, name, image }) => (
-          <Card key={id}>
+        {history.map((character) => (
+          <Card key={character.id}>
             <Image
-              src={image}
-              alt={name}
+              src={character.image}
+              alt={character.name}
             />
-            <NameCharacter>{name}</NameCharacter>
-            <ViewButton idCharacter={id} />
+            <NameCharacter>{character.name}</NameCharacter>
+            <ViewButton mainCharacter={character} />
           </Card>
         ))}
       </ContainerCards>
