@@ -1,12 +1,7 @@
-import { Container } from "./Containers";
-import { Title1 } from "../../shared/Title";
+import { Title } from './elements';
 
 const Message = () => {
-  return (
-    <Container>
-      <Title1 message>No se ha cargado ningún personaje</Title1>
-    </Container>
-  );
+  return <Title>No se ha cargado ningún personaje</Title>;
 };
 
 export default Message;
