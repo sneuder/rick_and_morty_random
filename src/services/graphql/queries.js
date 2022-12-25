@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const CHARACTER = gql`
-  query character($id: ID!) {
+  query findCharacterById($id: ID!) {
     character(id: $id) {
       name
       id
@@ -9,6 +9,7 @@ export const CHARACTER = gql`
       species
       type
       gender
+      image
       origin {
         name
       }
@@ -16,7 +17,6 @@ export const CHARACTER = gql`
         name
       }
       created
-      image
     }
   }
 `;
