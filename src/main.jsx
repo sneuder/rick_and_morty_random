@@ -1,22 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import { ApolloProvider } from "@apollo/client";
-import client from "./graphql/client";
+import { ApolloProvider } from '@apollo/client';
+import client from './services/graphql/client';
 
-import App from "./App";
+import App from './app';
 
-import { GlobalStyle } from "./styles";
+import { GlobalStyle } from './styles/globalStyles';
 
-if(typeof document !== "undefined") {
-
-  ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-      <ApolloProvider client={client}>
-        <GlobalStyle />
-        <App />
-      </ApolloProvider>
-    </React.StrictMode>
-  
-  );
-}
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <ApolloProvider client={client}>
+      <GlobalStyle />
+      <App />
+    </ApolloProvider>
+  </React.StrictMode>
+);
